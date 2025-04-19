@@ -1,0 +1,9 @@
+transformers
+torch
+langchain
+langchain-core
+langgraph
+langchain-community
+tiktoken
+huggingface-hub
+gradio

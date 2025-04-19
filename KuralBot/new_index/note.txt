@@ -1,0 +1,1 @@
+create index.pkl and index.faiss with respect to thirukural texts

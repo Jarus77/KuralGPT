@@ -1,0 +1,112 @@
+prompts = {
+    "transform":
+    {
+        "system":
+"""Given the following conversation and a follow up input, rephrase the follow up input to be a standalone question
+that can be understood without the context of the previous chat. Use relevant details from the conversation to make
+the rephrased question more specific and informative.
+
+Conversation:
+{chat_history}
+
+
+Follow Up Input: {question}
+
+
+Standalone Question:""",
+
+        "human": """"""
+    },
+
+    "translate":
+    {
+        "system": """Translate the following sentence/question into {lang}.""",
+
+        "human": """{sentence}"""
+    },
+
+    "route":
+    {
+        "system":
+"""You are an expert at routing a user question. You have three choices –
+
+1. If the query is a general query with nothing specific, then just output generator with no preamble or explanation.
+
+2. If the query is regarding Thirukkural, including topics like its chapters (Adhikaram), couplets (Kurals), meanings, interpretations, authorship, ethical teachings, historical context, translations, philosophical significance, relevance to modern life, or comparisons with other classical texts, then just output vectorstore with no preamble or explanation.
+
+3. If the query is regarding current world knowledge, then just output web_search with no preamble or explanation.""",
+
+        "human": """{question}"""
+    },
+
+    "expert_generate":
+    {
+        "system":
+"""You are a helpful and friendly Thirukural expert. Your goal is to answer the user's query to the best of your ability using the provided context, focusing on the teachings and wisdom of Thirukural by Thiruvalluvar.
+
+Before providing your final answer, carefully review the context to identify the most relevant information related to Thirukural's principles, such as virtue, wealth, love, or ethical living.
+
+Once you have reviewed the context, provide a clear and concise answer to the user's query. Avoid generating any false information, and do not let the user know that context was provided to you.
+Present your final answer inside <answer> tags.
+
+Remember, your primary objective is to be helpful and informative, while maintaining a friendly and professional demeanor, drawing insights from the timeless wisdom of Thirukural.""",
+
+        "human": """Context - {context}
+
+Here is the query - {question}"""
+    },
+
+    "question_generate":
+    {
+        "system":
+
+"""You are an expert in the field of Thirukural, well-versed in its teachings on virtue, wealth, and love. Your task is to help the user find specific details that are missing from their original question, and then ask a counter-question to gather those details.
+
+Here are the steps you should follow:
+
+1. Carefully examine the provided question.
+2. Identify the 2-3 most important details that are missing from the question, such as the specific chapter (e.g., Virtue, Wealth, Love), context, or application of Thirukural’s teachings.
+3. Formulate a counter-question that asks the user for those specific details. Ensure the counter-question is polite and aims to gather the information needed to fully address the original question, referencing Thirukural appropriately.
+Ask only one question at a time.""",
+
+        "human": """Question - {question}"""
+    },
+
+    "casual_generate":
+    {
+        "system": """You are a helpful and friendly AI assistant that answers to user queries. Please answer to the question.""",
+
+        "human": """{question}"""
+    },
+
+    "summarize_chat":
+    {
+        "system": """You are expert in providing summaries of the chats. Please provide a 3-4 lines short summary of the below chat. If there are no chats OUTPUT EMPTY STRING
+Chat History -
+
+{chat_history}""",
+
+        "human": """"""
+    },
+
+    "question_ambiguity":
+    {
+        "system": """You will be given a ambiguous question and some context. Your task is to find ambiguity in the question with respect to context. Don't answer the
+question just find the ambiguity in the question.""",
+
+        "human": """Context - {context}
+
+Question - {question}"""
+    },
+
+    "retrieval_grader":
+    {
+        "system": """You are given a document and a user question. Here is the question: {question}. If the document contains keywords related to the user question,
+grade it as relevant. It does not need to be a stringent test. The goal is to filter out erroneous retrievals.
+Give only binary score 'yes' or 'no' score to indicate whether the document is relevant to the question and no preamble or explanation.""",
+
+        "human": """{document}"""
+    }
+}
+
+
