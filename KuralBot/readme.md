@@ -1,5 +1,5 @@
-# Agribot
-Agribot is an intelligent chatbot designed to assist with agricultural inquiries. It provides farmers and agricultural enthusiasts with instant advice on crop management, soil health, pest control, and more.
+# ThirukuralBot
+ThirukuralBot is an intelligent chatbot designed to assist with inquiries about Thirukural, the Tamil classic by Thiruvalluvar. It provides users with instant insights on ethical teachings, practical wisdom, and guidance on virtue, wealth, and love.
 
 ## Instructions to run the app
 
