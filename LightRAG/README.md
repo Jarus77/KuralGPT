@@ -1,12 +1,5 @@
-<center><h2>🚀 LightRAG: For KuralGPT</h2></center>
+<center><h2>LightRAG: For KuralGPT</h2></center>
 
-
-## Algorithm Flowchart
-
-![LightRAG Indexing Flowchart](https://learnopencv.com/wp-content/uploads/2024/11/LightRAG-VectorDB-Json-KV-Store-Indexing-Flowchart-scaled.jpg)
-*Figure 1: LightRAG Indexing Flowchart*
-![LightRAG Retrieval and Querying Flowchart](https://learnopencv.com/wp-content/uploads/2024/11/LightRAG-Querying-Flowchart-Dual-Level-Retrieval-Generation-Knowledge-Graphs-scaled.jpg)
-*Figure 2: LightRAG Retrieval and Querying Flowchart*
 
 ## Install
 
